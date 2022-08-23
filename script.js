@@ -25,7 +25,10 @@ const handleClickCard = () => {
   link.classList.toggle('link');
   link.classList.toggle('link--open');
 
-  cardContent.classList.toggle('hidden');
+  cardContent.classList.toggle('content');
+  cardContent.classList.toggle('content--open');
+
+  /* cardContent.classList.toggle('hidden'); */
 
 };
 

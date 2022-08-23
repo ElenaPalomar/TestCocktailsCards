@@ -41,10 +41,11 @@ body {
 
 
 .card {
-  background: url(./coctel.jfif);
+  background-image: url(./coctel.jfif);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: none;
 
   border-radius: 50%;
 
@@ -61,15 +62,19 @@ body {
   justify-content: center;
   align-items: center;
 
-  transition: 1s;
+  transition: border-radius 0.5s ease, background-image 0.5s ease, width 0.3s ease, height 0.3s ease-in;
 }
 
 .card--open {
-  background: white;
+  background-color: white;
+  background-image: none;
 
   box-shadow: 0 0 20px #000;
 
   width: 600px;
+  height: 500px;
+
+  padding: 15px;
 
   border-radius: 0;
 
@@ -77,8 +82,11 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: 15px;
+
+  transition: border-radius 0.8s ease, background-image 10s ease 2s, background-color 0.5s linear, width 0.5s linear, height 0.5s linear;
 }
 
 
@@ -91,9 +99,9 @@ body {
 }
 
 .title--open {
-  width: 600px;
+  width:100%;
 
-  margin: 40px 0 20px;
+  margin: 20px;
 
   text-align: center;
 }
@@ -110,7 +118,7 @@ body {
 }
 
 .link--open {
-  padding: 10px 20px 20px;
+  padding: 10px 20px 60px;
 
   color: #f00;
   text-decoration: none;
@@ -120,9 +128,14 @@ body {
 
 
 .content {
+  width: 0;
+  height: 0;
+  transform: scale(0);
+}
+.content--open {
   width: 100%;
 
-  padding: 20px;
+  margin: 5px;
 
   color: #000;
 
@@ -130,14 +143,22 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
+
+  transform: scale(1);
+
+  transition: 0.3s;
+  transition-delay: 0.3s;
 }
 
-.content_img {
+
+.content__img {
   height: 250px;
 }
 
 .content__text {
-  text-align: justify;
+  list-style: none;
+
+  font-size: 25px;
 }
 
 
