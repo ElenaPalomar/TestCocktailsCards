@@ -26,8 +26,9 @@ body {
   flex-wrap: wrap;
 
   min-width: 200px;
-  width: 80%;
+  width: auto;
 
+  margin: 20px;
   padding: 30px;
 
   background-color: rgba(255, 255, 255, 0.3);
@@ -63,7 +64,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  transition: border-radius 0.3s ease, width 0.3s ease, max-height 0.2s ease;
+  transition: border-radius 0.3s ease, width 0s ease, max-height 0.2s ease;
 }
 
 .card--open {
@@ -180,13 +181,13 @@ body {
 
     margin: 20px;
 
-    transition: border-radius 0.3s ease, width 0.2s ease, max-height 0.5s ease;
+    transition: border-radius 0.3s ease, width 0s ease, max-height 0.5s ease;
   }
 
   .card--open {
     max-width: 600px;
 
-    transition: border-radius 0.3s ease, width 0.5s linear, max-height 1s ease;
+    transition: border-radius 0.3s ease, width 0.1s linear, max-height 1s ease;
   }
 
 
